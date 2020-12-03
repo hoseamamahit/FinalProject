@@ -1,0 +1,451 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.judul {
+  font-family: 'OpenSans-ExtraBold';
+  margin: auto;
+  text-align: center;
+  color: #008383;
+  border-bottom: 2px solid rgba(39, 167, 0, 0.5);
+  width: 200px;
+}
+
+.subJudul {
+  font-family: 'OpenSans-ExtraBold';
+  text-align: center;
+  color: #008383;
+}
+
+.sub2Judul {
+  font-family: 'OpenSans-ExtraBold';
+  text-align: left;
+  color: #008383;
+}
+
+body {
+  background-image: url('background/bg.jpg');
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+button {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  color: #d1d4d4;
+  background-color: #008b8b;
+}
+
+p {
+  color: #008383;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.about, .ability, .education {
+  font-family: 'OpenSans-Regular';
+  margin: 0 10px;
+  box-sizing: border-box;
+}
+
+#about, #ability, #education, #contact {
+  height: 50px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;  
+  padding: 14px 0;
+  background-color: #008383;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 50%;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: #d8ccf8;
+  font-size: 20px;
+}
+
+nav ul a:hover {
+  color: #f6f4ff;
+}
+
+.logo {
+  font-family: 'LeagueGothic-Italic', Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  letter-spacing: 1px;
+  color: #e4dff5;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -6px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #e4dff5;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.header {
+  padding-top: 40px;
+  box-sizing: border-box;
+}
+
+header img {
+  border-radius: 50%;
+  max-width: 150px;
+}
+
+.profile {
+  font-family: 'OpenSans-Regular', Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-content: center;
+  gap: 15px;
+  text-align: center;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+
+.profile img {
+  width: 200px;
+  margin: auto;
+}
+
+.nama {
+  margin-top: 10px;
+  box-sizing: border-box;
+  color: #008383;
+}
+
+.occupation {
+  color: #008383;
+}
+
+.nama, .occupation {
+  font-weight: bold;
+}
+
+.medsos {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding-bottom: 120px;
+}
+
+.medsos li {
+  margin: 0 15px;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: #008383;
+  border-radius: 30px;
+}
+
+.medsos a {
+  display: grid;
+  place-content: center;
+  text-decoration: none;
+}
+
+.medsos li:hover {
+  background-color: #008383;
+}
+
+.icons i {
+  font-size: 25px;
+  color: white;
+}
+
+.aboutMe {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.aboutMe a {
+  text-decoration: none;
+  color: #008383;
+}
+
+.aboutMe a:hover {
+  color: #008383;
+}
+
+.hobbyIcons {
+  margin: 10px;
+  list-style: none;
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(2, 70px);
+  gap: 10px;
+}
+
+.hobbyIcons i {
+  font-size: 70px;
+  color: #008383;
+}
+
+.info {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 100px 200px;
+  place-content: center;
+  text-align: center;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.info i {
+  color: #008383;
+}
+
+.ability .content {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.programmingLang ul, .frontend ul {
+  list-style: none;
+  display: grid;
+  justify-content: space-evenly;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.school {
+  list-style: none;
+  display: grid;
+  place-content: center;
+  gap: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.school .sub2Judul {
+  border: 2px solid #008383;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.form, .aside {
+  padding: 10px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 5px;
+  margin: 5px auto;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #d1d4d4;
+  border: none;
+}
+
+.massage {
+  width: 100%;
+  padding: 0 5px;
+  margin: 5px auto;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #d1d4d4;
+  border: none;
+}
+
+.input:focus, .massage:focus {
+  border: 3px solid #008383;
+}
+
+.sub {
+  display: grid;
+  justify-content: center;
+}
+
+.submit {
+  width: 200px;
+  padding: 10px 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #008383;
+  color: white;
+}
+
+.submit:hover {
+  background-color: #008383;
+}
+
+.aside .subJudul {
+  text-align: left;
+  margin: 5px;
+}
+
+.aside .sub2Judul {
+  font-size: 16px;
+  text-indent: 20px;
+}
+
+.footer {
+  width: 100%;
+  margin-top: 50px;
+  padding: 40px 0;
+  background-color: #008383;
+  box-sizing: border-box;
+}
+
+.footer .judul {
+  border: none;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.footer .sub2Judul {
+  color: white;
+  text-align: center;
+}
+
+.footer .medsos {
+  padding: 0;
+  margin-top: 15px;
+}
+
+.footer .sub3Judul {
+  font-family: 'OpenSans-ExtraBold';
+  text-align: center;
+  color: #140d27;
+  font-size: 14px;
+  padding-top: 50px;
+}
+
+
+@media screen and (max-width: 576px) {
+  .menu-toggle {
+      display: flex;
+  }
+
+  nav ul {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 80%;
+      height: 100vh;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+      background-color: #008383;
+      transform: translateX(0);
+      transition: all 1s;
+  }
+
+  nav ul.slide {
+      transform: translateX(100%);
+  }
+}
+
+@media screen and (min-width: 576px) { 
+
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+      width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) { 
+  .content {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      gap: 10px;
+  }
+
+  .hobby, .information {
+      border: 3px solid #008383;
+      border-radius: 10px;
+  }
+
+  .programmingLang, .frontend {
+      border: 3px solid #008383;
+      border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 992px) { 
+
+}
+
+@media screen and (min-width: 1200px) { 
+  
+}
+
+@font-face {
+  font-family: 'OpenSans-ExtraBold';
+  src: url(font/OpenSans-ExtraBold.ttf);
+}
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url(font/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: 'Evander-ExtraBold';
+  src: url(font/Evander-ExtraBold.ttf);
+}
